@@ -357,6 +357,17 @@ THE SOFTWARE.
 	#define NUM_CAN_CHANNEL			 1
 	#define CONFIG_CANFD			 1
 
+#elif defined(BOARD_WeActStudio_USB2CANFDV1)
+	#define USBD_PRODUCT_STRING_FS	 (uint8_t*) "USB2CANFDV1 gs_usb"
+	#define USBD_MANUFACTURER_STRING (uint8_t*) "WeActStudio"
+	#define DFU_INTERFACE_STRING_FS	 (uint8_t*) "USB2CANFDV1 firmware upgrade interface"
+
+	#define TIM2_CLOCK_SPEED		 64000000
+
+	#define CAN_CLOCK_SPEED			 40000000
+	#define NUM_CAN_CHANNEL			 1
+	#define CONFIG_CANFD			 1
+
 #elif defined(BOARD_STM32F4_DevBoard)
 	#define USBD_PRODUCT_STRING_FS	 (uint8_t*) "STM32F4VE Dev Board"
 	#define USBD_MANUFACTURER_STRING (uint8_t*) "misc"

@@ -286,7 +286,7 @@ endfunction()
 set(TGTF042_LIST "cantact" "canalyze" "canable" "usb2can" "cannette")
 set(TGTF072_LIST "candleLight" "CANable_MKS" "CONVERTDEVICE_xCAN" "DSD_TECH_SH_C30A" "FYSETC_UCAN")
 set(TGTF407_LIST "STM32F4_DevBoard")
-set(TGTG0B1_LIST "budgetcan" "CONVERTDEVICE_xCANFD" "nucleo_g0b1re" "candleLightFD")
+set(TGTG0B1_LIST "budgetcan" "CONVERTDEVICE_xCANFD" "nucleo_g0b1re" "candleLightFD" "WeActStudio_USB2CANFDV1")
 set(TGTG431_LIST "CANable2_MKS")
 
 foreach (TGTNAME IN LISTS TGTF042_LIST)

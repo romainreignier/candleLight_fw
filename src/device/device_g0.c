@@ -57,6 +57,18 @@ void device_sysclock_config(void) {
 	RCC_OscInitStruct.PLL.PLLR = RCC_PLLR_DIV5;
 	RCC_OscInitStruct.PLL.PLLQ = RCC_PLLQ_DIV8;
 	RCC_OscInitStruct.PLL.PLLP = RCC_PLLP_DIV8;
+#elif defined(BOARD_WeActStudio_USB2CANFDV1)
+	/* WeActStudio_USB2CANFDV1 has an externel 16MHz crystal */
+	RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSE|RCC_OSCILLATORTYPE_HSI48;
+	RCC_OscInitStruct.HSEState = RCC_HSE_ON;
+	RCC_OscInitStruct.HSI48State = RCC_HSI48_ON;
+	RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
+	RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSE;
+	RCC_OscInitStruct.PLL.PLLM = RCC_PLLM_DIV1;
+	RCC_OscInitStruct.PLL.PLLN = 20;
+	RCC_OscInitStruct.PLL.PLLR = RCC_PLLR_DIV5;
+	RCC_OscInitStruct.PLL.PLLQ = RCC_PLLQ_DIV8;
+	RCC_OscInitStruct.PLL.PLLP = RCC_PLLP_DIV2;
 #else
 	RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSI|RCC_OSCILLATORTYPE_HSI48;
 	RCC_OscInitStruct.HSIState = RCC_HSI_ON;
